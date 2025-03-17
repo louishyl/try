@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color:  black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 28px;
+    color: white;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 images per row */
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Gallery Items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    border: solid 5px black;
+
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Hover Zoom Effect */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Text */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Overlay on Hover */
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
